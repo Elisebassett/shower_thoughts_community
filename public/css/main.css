@@ -1,0 +1,47 @@
+/***********Layout***********/
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+  margin-bottom: -50px;
+  margin-top: 70px;
+}
+
+/*************Nav Partial**********/
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0;
+}
+
+nav ul {
+	float: right;
+	padding: 15px;
+}
+
+#logo_nav {
+	float: left;
+	height: 85px;
+	margin: 10px
+}
+
+
+/***************Home***********/
+
+.home_container {
+  height: 100%;
+}
+
+.round {
+	border-radius: 50px;
+}
+
+.home {
+	text-align: center;
+}
+
+.center {
+	height: 200px;
+}
+
+
