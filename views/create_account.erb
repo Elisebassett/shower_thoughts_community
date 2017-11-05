@@ -1,0 +1,29 @@
+<%= erb(:nav) %>
+
+<div class="container">
+	<form class="create_account" action="/create_account" method="POST">
+	    <h1 class="h1 text-center mb-4">Create and Account</h1>
+
+	    <div class="md-form">
+	        <i class="fa fa-user prefix black-text"></i>
+	        <input type="text" id="orangeForm-name" class="form-control" type="text" name="name">
+	        <label for="orangeForm-name">Username</label>
+	    </div>
+	    <div class="md-form">
+	        <i class="fa fa-envelope prefix black-text"></i>
+	        <input type="text" id="orangeForm-email" class="form-control" type="email" name="email">
+	        <label for="orangeForm-email">Your email</label>
+	    </div>
+
+	    <div class="md-form">
+	        <i class="fa fa-lock prefix black-text"></i>
+	        <input type="password" id="orangeForm-pass" class="form-control" type="password" name="password">
+	        <label for="orangeForm-pass">Your password</label>
+	    </div>
+
+	    <div class="text-center">
+	       <input class="btn btn-elegant round" type="submit" value="Create Account">
+	    </div>
+
+	</form>
+</div>
