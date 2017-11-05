@@ -1,6 +1,5 @@
 /***********Layout***********/
 .wrapper {
-	overflow: hidden;
 	min-height: 100%;
   margin-bottom: -50px;
   margin-top: 70px;
@@ -50,4 +49,17 @@ nav ul {
 .create_account {
 	margin-top: 150px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

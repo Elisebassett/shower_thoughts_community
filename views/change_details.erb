@@ -1,0 +1,33 @@
+<%= erb(:nav) %>
+
+<div class="container">
+	<form class="create_account" action="/change_details" method="POST">
+	    <h1 class="h1 text-center mb-4">Change Your Details</h1>
+
+	    <div class="md-form">
+	        <i class="fa fa-user prefix black-text"></i>
+	        <input type="text" id="orangeForm-name" class="form-control" type="text" name="name">
+	        <label for="orangeForm-name">New Username</label>
+	    </div>
+	    <div class="md-form">
+	        <i class="fa fa-envelope prefix black-text"></i>
+	        <input type="text" id="orangeForm-email" class="form-control" type="email" name="email">
+	        <label for="orangeForm-email">Your New Email</label>
+	    </div>
+
+	    <div class="md-form">
+	        <i class="fa fa-lock prefix black-text"></i>
+	        <input type="password" id="orangeForm-pass" class="form-control" type="password" name="password">
+	        <label for="orangeForm-pass">Your New Password</label>
+	    </div>
+			<div class="md-form">
+        <i class="fa fa-pencil prefix black-text"></i>
+        <textarea type="text" id="form8" class="md-textarea" style="height: 100px"></textarea>
+        <label for="form8">Change Your Bio</label>
+	    </div>
+	    <div class="text-center">
+	       <input class="btn btn-elegant round" type="submit" value="Create Account">
+	    </div>
+
+	</form>
+</div>
