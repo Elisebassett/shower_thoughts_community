@@ -1,0 +1,12 @@
+<%= erb(:nav) %>
+<div class="wrapper">
+	<div class="blue">
+		<div class="container search">
+			<h1 class="h1 text-center mb-4">Who are you looking for?</h1>
+			<form class="form-inline active-pink active-pink-2" action="/create_account" method="POST">
+			  <input class="form-control w-100" type="text" aria-label="Search">
+			  <label for="orangeForm-email">Username</label>
+			</form>
+		</div>
+	</div>
+		<%= erb(:post_footer) %>
