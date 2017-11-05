@@ -3,7 +3,7 @@
 	overflow: hidden;
 	min-height: 100%;
   margin-bottom: -50px;
- /* margin-top: 70px;*/
+  margin-top: 70px;
 }
 
 /*************Nav Partial**********/
@@ -41,8 +41,13 @@ nav ul {
 }
 
 .center {
-	height: 270px;
+	height: 200px;
 	
 }
 
+/********Create Account********/
+
+.create_account {
+	margin-top: 150px;
+}
 
