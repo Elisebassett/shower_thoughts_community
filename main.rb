@@ -44,6 +44,11 @@ get '/found' do
 	erb :found
 end
 
+get '/your_post' do
+	
+	erb :your_post
+end
+
 
 post '/create_account' do
 
@@ -60,4 +65,7 @@ post '/find' do
 	erb :found
 end
 
-post '/'
+post '/post' do
+	
+	erb :your_post
+end
