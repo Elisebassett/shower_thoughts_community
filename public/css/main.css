@@ -3,7 +3,7 @@
 	overflow: hidden;
 	min-height: 100%;
   margin-bottom: -50px;
-  margin-top: 70px;
+ /* margin-top: 70px;*/
 }
 
 /*************Nav Partial**********/
@@ -29,7 +29,7 @@ nav ul {
 /***************Home***********/
 
 .home_container {
-  height: 100%;
+  height: 900px;
 }
 
 .round {
@@ -41,7 +41,8 @@ nav ul {
 }
 
 .center {
-	height: 200px;
+	height: 270px;
+	
 }
 
 
