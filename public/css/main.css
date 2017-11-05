@@ -3,27 +3,38 @@
 	min-height: 100%;
   margin-bottom: -50px;
   margin-top: 70px;
+  overflow: hidden;
 }
 
 /*************Nav Partial**********/
 nav {
 	position: fixed;
 	width: 100%;
-	z-index: 2;
 	top: 0;
+	z-index: 2;
 }
 
 nav ul {
 	float: right;
 	padding: 15px;
+	z-index: 3;
 }
 
 #logo_nav {
 	float: left;
 	height: 85px;
-	margin: 10px
+	margin: 10px;
+	z-index: 3;
 }
 
+.nav_back {
+	background-color: white;
+	opacity: 0.5;
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	z-index: -1;
+}
 
 /***************Home***********/
 
@@ -50,6 +61,24 @@ nav ul {
 	margin-top: 150px;
 }
 
+.search {
+	margin-top: 200px;	
+	position: relative;
+}
+
+.active-pink-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 2px solid #f48fb1;
+    box-shadow: 0 2px 0 0 #f48fb1;
+    margin-top: -10px;
+}
+
+.active-pink-2 {
+	margin-top: 60px;
+}
+
+.find {
+	color: white;
+}
 
 /***********New Post***********/
 
@@ -57,9 +86,23 @@ nav ul {
 	margin-top: 170px;
 }
 
+.blue {
+	position: absolute;
+	background-color: rgb(0,156, 177);
+	height: 500px;
+	width: 100%;
+	top: 0;
+}
 
+/**********Post Partials********/
 
-
+.random_post {
+	height: 100px;
+	width: 500px;
+	background-color: rgb(241, 110, 173);
+	color: rgb(33, 33, 33);
+	border-radius: 40px;
+}
 
 
 
