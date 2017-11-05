@@ -59,3 +59,5 @@ post '/find' do
 	
 	erb :found
 end
+
+post '/'
