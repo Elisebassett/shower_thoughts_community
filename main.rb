@@ -29,7 +29,7 @@ get '/profile_posts' do
 end
 
 get '/change_details' do
-	erb :profile_posts
+	erb :change_details
 end
 
 get '/post' do
