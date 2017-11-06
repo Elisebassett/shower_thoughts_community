@@ -1,4 +1,4 @@
-<%= erb(:nav) %>
+
 
 <div class="container">
 	<div class="post"></div>
@@ -7,12 +7,12 @@
 
 	    <div class="md-form">
 	        <i class="fa fa-user prefix black-text"></i>
-	        <input type="text" id="orangeForm-name" class="form-control" type="text" name="name">
+	        <input type="text" id="orangeForm-name" class="form-control" type="text" name="user[username]">
 	        <label for="orangeForm-name">Username</label>
 	    </div>
 	    <div class="md-form">
 	        <i class="fa fa-lock prefix black-text"></i>
-	        <input type="password" id="orangeForm-pass" class="form-control" type="password" name="password">
+	        <input type="password" id="orangeForm-pass" class="form-control" type="password" name="user[password]">
 	        <label for="orangeForm-pass">Password</label>
 	    </div>
 	    <div class="text-center">

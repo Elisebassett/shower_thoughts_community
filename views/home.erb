@@ -1,4 +1,24 @@
-<%= erb(:nav) %>
+<% if @user %>
+	<div class="container">
+		<div class="row">
+			<div class="col feed">
+				<h1>Welcome <%= @user.name %></h1>
+			</div><!-- col -->
+		</div><!-- row -->
+		<div class="row">
+			<div class="col">
+				<a href="/profile"><button type="button" class="btn btn-info round">Your Profile</button></a>
+			</div>
+		</div>
+		<div class="row">
+				<% @feed.each do |post| %>
+						<div class="random_post col-6"> <%= post.content %> </div>
+				<% end %>
+		</div>
+	</div><!-- container -->
+
+<% else %>
+
 <div class="container_fluid home_container">
 	<div class="row center"></div>
 	<div class="row">
@@ -15,3 +35,4 @@
 	</div>
 </div>
   
+<% end %>
