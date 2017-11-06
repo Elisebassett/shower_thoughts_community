@@ -3,17 +3,28 @@ require 'sinatra/activerecord'
 require './models'
 
 set :database, "sqlite3:main.sqlite3"
+set :sessions, true
+
+def current_user
+	if session[:user_id]
+		User.find(session[:user_id])
+	end
+end
+
 
 get '/' do
+	@user = current_user
+	@feed = Post.last(10)
   erb :home
 end 
 
 get '/sign_in' do
+	@user = current_user
+	if @user
+		redirect '/'
+	else
 	erb :sign_in
-end
-
-get '/welcome' do
-	erb :welcome
+	end
 end
 
 get '/create_account' do 
@@ -21,6 +32,7 @@ get '/create_account' do
 end
 
 get '/profile' do
+	@user = current_user
 	erb :profile
 end
 
@@ -41,7 +53,8 @@ get '/find' do
 end
 
 get '/found' do
-	erb :found
+
+	erb :profile
 end
 
 get '/your_post' do
@@ -49,23 +62,32 @@ get '/your_post' do
 	erb :your_post
 end
 
-
 post '/create_account' do
-	
-	erb :welcome
+	@user = User.create(params[:user])
+	erb :/
 end
 
 post '/sign_in' do
-	
-	erb :welcome
+	@user = User.find_by(params[:user])
+	if @user
+		session[:user_id] = @user.id 
+		redirect '/'
+	else
+		redirect '/sign_in'
+	end
 end
 
 post '/find' do
-	
+	@user = User.where(name: params[:name]).first
 	erb :found
 end
 
 post '/post' do
 	
 	erb :your_post
+end
+
+get '/logout' do
+	session[:user_id] = nil
+	redirect '/'
 end

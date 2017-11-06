@@ -51,11 +51,10 @@ nav ul {
 }
 
 .center {
-	height: 200px;
-	
+	height: 200px;	
 }
 
-/********Forms********/
+/***************Forms***********/
 
 .create_account {
 	margin-top: 150px;
@@ -102,6 +101,13 @@ nav ul {
 	background-color: rgb(241, 110, 173);
 	color: rgb(33, 33, 33);
 	border-radius: 40px;
+}
+
+
+/**********Welcome Page**********/
+
+.feed {
+	margin-top: 50px;
 }
 
 
