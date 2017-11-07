@@ -1,13 +1,11 @@
-<%= erb(:nav) %>
-
 <div class="container">
 	<div class="post"></div>
 	<h1 class="home">What Was Your Last Shower Thought?</h1>
 	<form class="create_account" action="/post" method="POST">
 <div class="md-form">
         <i class="fa fa-pencil prefix black-text"></i>
-        <textarea type="text" id="form8" class="md-textarea" style="height: 100px"></textarea>
-        <label for="form8">Your post here! Remember, keep it to 149 characters!</label>
+        <textarea type="text" id="form8" class="md-textarea" maxlength="150" style="height: 100px" name="post"></textarea>
+        <label for="form8">Your post here! Remember, keep it to 150 characters!</label>
 	    </div>
 	    <div class="text-center">
 	       <input class="btn btn-elegant round" type="submit" value="Create Account">

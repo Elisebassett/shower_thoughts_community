@@ -8,12 +8,12 @@
 			<br>
 			<h5>Username: <%= @user.username %></h5>
 			<h5>Bio:</h5> 
-			<% if @bio %>
+			<% if @user.bio %>
 				<p><%= @user.bio %></p>
 			<% else %>
 					<p>Where's your bio?! Don't you want one?! Click below to edit your bio!</p>
-					<a href="/change_details"><button class="btn btn-info round">Edit Your Info</button></a>
 			<% end %>
+			<a href="/change_details"><button class="btn btn-info round">Edit Your Info</button></a>
 		</div><!-- col -->
 	</div><!-- row -->
 	<div class="row">

@@ -25,12 +25,23 @@
 	    </div>
 			<div class="md-form">
         <i class="fa fa-pencil prefix black-text"></i>
-        <textarea type="text" id="form8" class="md-textarea" name="user[bio]" value="<%=	 @user.bio %>" style="height: 100px"></textarea>
+        <textarea type="text" id="form8" class="md-textarea" name="user[bio]" maxlength="150" style="height: 100px"><%= @user.bio %></textarea>
         <label for="form8">Change Your Bio</label>
 	    </div>
-	    <div class="text-center">
-	       <input class="btn btn-elegant round" type="submit" value="Change Details">
+	    <div class="row">
+			  <div class="col-2">
+			  	  <div class="text-center">
+			  	   <input class="btn btn-elegant round" type="submit" value="Change Details">
+			  	   </form>
+			  	</div>
+			  </div>
+			  <div class="col-2">
+			  	  <div class="text-center">
+			  	  <a href="/delete_account" class="btn btn-outline-elegant round">Delete Account</a>
+			  	</div>
+			  </div>
+	    	
 	    </div>
 
-	</form>
+	
 </div>

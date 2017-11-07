@@ -51,7 +51,6 @@ end
 
 get '/post' do
 	@user = current_user
-	@bio = @user.bio
 	if @user
 		erb :post
 	else
@@ -60,6 +59,7 @@ get '/post' do
 end
 
 get '/find' do
+	@user = current_user
 	erb :find
 end
 
@@ -69,8 +69,15 @@ get '/profile/:id' do
 end
 
 get '/your_post' do
-	
+	@user = current_user
 	erb :your_post
+end
+
+get '/delete_account' do
+	@user = current_user
+	@user.destroy
+	session[:user_id] = nil
+	redirect '/'
 end
 
 post '/create_account' do
@@ -101,7 +108,7 @@ post '/find' do
 end
 
 post '/post' do
-	
+	@user = current_user
 	erb :your_post
 end
 

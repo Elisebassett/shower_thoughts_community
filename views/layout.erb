@@ -18,25 +18,51 @@
 </head>
 
 <body>
-    
-    <nav>
-      <div class="nav_back"></div>
-      <a href="/"><img id="logo_nav" src="imgs/nav_logo.png"></a>
-      <ul class="nav">
-        <li class="nav-item">
-             <a class="nav-link active" href="/find">Find a User</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/logout">Logout</a>
-        </li>
-      
-      </ul>
-    </nav>
+    <% if @user %>
+     <nav class='navbar'>
+          <div class="nav_back"></div>
+          <a href="/"><img id="logo_nav" src="imgs/nav_logo.png"></a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <form action="/find" class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
+            </form>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <i class="fa fa-user"></i> Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="/profile">See Info</a>
+                    <a class="dropdown-item" href="/change_details">Change Details</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            </li>
+          </ul>
+        </nav>
+    <% else %>
+        < <nav class='navbar'>
+          <div class="nav_back"></div>
+          <a href="/"><img id="logo_nav" src="imgs/nav_logo.png"></a>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Home</a>
+            </li>
+            <form action="/find" class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
+            </form>
+             <li class="nav-item">
+              <a class="nav-link active" href="/sign_in">Sign In</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link active" href="/create_account">Create Account</a>
+            </li>
+          </ul>
+        </nav>
+    <% end %>
         
-  
   <div class="wrapper">
     <%= yield %>
     <div class="push"></div>
