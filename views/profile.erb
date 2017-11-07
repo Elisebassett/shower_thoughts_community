@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1><%= @user.name %></h1>
+		</div><!-- col -->
+		<div class="col">
+			<br>
+			<br>
+			<h5>Username: <%= @user.username %></h5>
+			<h5>Bio:</h5> 
+			<% if @bio %>
+				<p><%= @user.bio %></p>
+			<% else %>
+					<p>Where's your bio?! Don't you want one?! Click below to edit your bio!</p>
+					<a href="/change_details"><button class="btn btn-info round">Edit Your Info</button></a>
+			<% end %>
+		</div><!-- col -->
+	</div><!-- row -->
+	<div class="row">
+		
+	</div>
+</div><!-- container -->

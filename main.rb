@@ -23,7 +23,7 @@ get '/sign_in' do
 	if @user
 		redirect '/'
 	else
-	erb :sign_in
+		erb :sign_in
 	end
 end
 
@@ -33,27 +33,38 @@ end
 
 get '/profile' do
 	@user = current_user
-	erb :profile
-end
-
-get '/profile_posts' do
-	erb :profile_posts
+	if @user
+		erb :profile	
+	else
+		redirect '/'
+	end
 end
 
 get '/change_details' do
-	erb :change_details
+	@user = current_user
+	if @user
+		erb :change_details
+	else
+		redirect '/'
+	end
 end
 
 get '/post' do
-	erb :post
+	@user = current_user
+	@bio = @user.bio
+	if @user
+		erb :post
+	else
+		redirect '/'
+	end	
 end
 
 get '/find' do
 	erb :find
 end
 
-get '/found' do
-
+get '/profile/:id' do
+	@user = User.find(p[:id])
 	erb :profile
 end
 
@@ -64,7 +75,13 @@ end
 
 post '/create_account' do
 	@user = User.create(params[:user])
-	erb :/
+	erb :sign_in
+end
+
+post '/change_details' do
+	@user = current_user
+	@user.update(params[:user])
+	redirect '/profile'
 end
 
 post '/sign_in' do
@@ -78,8 +95,9 @@ post '/sign_in' do
 end
 
 post '/find' do
-	@user = User.where(name: params[:name]).first
-	erb :found
+	@search_term = "%#{params[:name]}%"
+	@results = User.where("name LIKE ?", @search_term)
+	erb :find
 end
 
 post '/post' do
