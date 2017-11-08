@@ -2,21 +2,27 @@
 	<div class="blue">
 		<div class="container search">
 			<div class="row">
-				<h1 class="h1 text-center mb-4">Who are you looking for?</h1>
+				<div class="col">
+					<h1 class="h1 text-center mb-4">Who are you looking for?</h1>
+				</div>
 			</div>
 			<div class="row">
-				<form class="form-inline active-pink active-pink-2" action="/find" method="POST">
-				  <input class="form-control w-100" type="text" aria-label="Search" name="name">
-				  <label for="orangeForm-email">Username</label>
-				</form>
+				<div class="col">
+					<form class="form-inline active-pink active-pink-2" action="/find" method="POST">
+					  <input class="form-control w-100" type="text" aria-label="Search" name="name">
+					  <label for="orangeForm-email">Username</label>
+					</form>
+				</div>
 			</div>
 			<div class="row">
 				<% if @search_term %>
 					<% if @results.nil? || @results.count == 0 %>
-						<p>There is no <%= @search_term.delete!('%') %> here!</p>
+						<div class="col results">
+							<h3>There is no <%= @search_term.delete!('%') %> here!</h3>
+						</div>
 					<% else %>
 						<% @results.each do |user| %>
-							<div class="col result">
+							<div class="col results">
 								<h1><%= user.name %></h1>
 								<a href="/profile/<%= user.id %>" class="btn btn-info">Visit Profile</a>
 							</div>	

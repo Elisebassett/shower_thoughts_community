@@ -11,9 +11,10 @@ $(function(){
 
 	// });
 $('.edit_post').on('click', function(){
-	$(this).parent('form').find('input').attr('readonly', false).focus();
+	// $('.post').attr('readonly', false).focus();
+	$(this).parent('form').find('textarea').attr('readonly', false).focus();
 	$(this).html(`
-		<p><em>  You may now make changes</em></p>
+		<p><em>You may now make changes</em></p>
 		<input class="btn btn-elegant round edit_button" type="submit" value="done">
 		`);
 });
