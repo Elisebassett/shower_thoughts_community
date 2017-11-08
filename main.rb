@@ -67,7 +67,7 @@ get '/profile/:id' do
 	@current_user = current_user
 	@user = User.find(params[:id])
 	@posts = @user.posts.reverse_order
-	erb :profile, layout: true
+	erb :profile
 end
 
 get '/change_details' do
