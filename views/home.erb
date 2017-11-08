@@ -19,7 +19,6 @@
 						<div class="card card-body post_container">
 							<h4 class="card-title"><%= post.user.username %></h4>
 					    <textarea class="card-text post" readonly="true"><%= post.content %></textarea>
-					    <a class="delete_post card-link" href="/delete_post/<%= post.id %>">Delete</a>
 				    </div>
 			   </div> 
 				<% end %>
@@ -28,7 +27,7 @@
 
 <% else %>
 
-<div class="container_fluid home_container">
+<div class="container_fluid">
 	<div class="row center"></div>
 	<div class="row">
 		<div class="home col">

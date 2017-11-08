@@ -5,19 +5,17 @@
 		</div>
 	</div>	
 	<div class="row">
-		<div class="col post_container">
+		<div class="card card-body post_container">
 			<form action="/your_post" method="POST">
-				<input class="post" type="text" readonly="true" name="post[:content]" value="<%= @user.posts.last.content %>">
-				<i class="fa fa-pencil edit_post" aria-hidden="true"> </i>
+		    <textarea class="card-title post no_title" readonly="true" maxlength='150'><%= @user.posts.last.content %></textarea>
+				<a class="delete_post card-link" href="/delete_post/<%= @user.posts.last.id %>">Delete</a>
+				<i class="fa fa-pencil edit_post card-link" aria-hidden="true"></i>
 			</form>
-		</div>
+		</div>	
 	</div>
 	<div class="row">
 		<div class="col">
-			<a href="/delete_post/<%= @user.posts.last.id %>" class="btn btn-elegant round">Delete Post</a>
-		</div>
-		<div class="col">
-			<a href="/profile" class="btn btn-outline-elegant round">Profile</a>
+			<a href="/profile" class="btn btn-elegant round">Back to Profile</a>
 		</div>
 	</div>
 </div>

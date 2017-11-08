@@ -82,7 +82,7 @@ end
 post '/change_details' do
 	@user = current_user
 	@user.update(params[:user])
-	redirect '/'
+	redirect '/profile'
 end
 
 get '/post' do
@@ -103,9 +103,6 @@ end
 get '/your_post' do
 	@user = current_user
 	@last_post = @user.posts.last
-	p "THIS IS LAST POST:#{@last_post}!!!!!!!!!!!!!"
-	p "THIS IS USER POST LAST:#{@user.post.last}!!!!!!!!!!!!!"
-
 	if @user
 		erb :your_post
 	else
@@ -152,6 +149,7 @@ get '/logout' do
 	session[:user_id] = nil
 	redirect '/'
 end
+
 
 # post '/search_for_user' do
 # 	puts "DID THE THING #{params[:search_term]}"
