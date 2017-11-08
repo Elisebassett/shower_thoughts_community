@@ -3,20 +3,39 @@
 		<div class="col">
 			<h1><%= @user.name %></h1>
 		</div><!-- col -->
+	</div>
+	<div class="row">
 		<div class="col">
-			<br>
 			<br>
 			<h5>Username: <%= @user.username %></h5>
 			<h5>Bio:</h5> 
-			<% if @user.bio %>
-				<p><%= @user.bio %></p>
+			<% if @user == @current_user %>
+				<% if @user.bio %>
+					<p><%= @user.bio %></p>
+				<% else %>
+						<p>Where's your bio?! Don't you want one?! Click below to edit your bio!</p>
+				<% end %>
+				<a href="/change_details"><button class="btn btn-info round">Edit Your Info</button></a>
 			<% else %>
-					<p>Where's your bio?! Don't you want one?! Click below to edit your bio!</p>
+				<p>No bio to be found</p>
 			<% end %>
-			<a href="/change_details"><button class="btn btn-info round">Edit Your Info</button></a>
 		</div><!-- col -->
 	</div><!-- row -->
 	<div class="row">
-		
+		<% @posts.each do |posts| %>
+			<div class="col-6">
+				<div class="card card-body post_container">
+					<form action="/profile">
+				    <textarea class="card-text post" readonly="true"><%= posts.content %></textarea>
+						<% if @user == @current_user %>
+							<div class="flex-row">
+								<a class="delete_post card-link" href="/delete_post/<%= posts.id %>">Delete</a>
+								<i class="fa fa-pencil edit_post card-link" aria-hidden="true"> </i>
+					    </div>
+						<% end %>
+					</form>
+				</div>
+			</div>
+		<% end %>
 	</div>
 </div><!-- container -->

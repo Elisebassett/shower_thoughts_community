@@ -3,7 +3,20 @@
 	min-height: 100%;
   margin-bottom: -50px;
   margin-top: 70px;
-  overflow: hidden;
+}
+
+.search_wrapper {
+	position: relative;
+}
+
+.search_wrapper #results {
+	position: absolute;
+	top: 0;
+	z-index: 3;
+}
+
+i {
+	cursor: pointer;
 }
 
 .nav-link {
@@ -87,8 +100,17 @@ nav ul {
 
 /***********New Post***********/
 
+.post_container {
+	margin: 10px;
+}
+
 .post {
+	border: none;
+}
+
+.post:focus {
 	margin-top: 170px;
+	border: 2px solid black;
 }
 
 .blue {
@@ -99,16 +121,23 @@ nav ul {
 	top: 0;
 }
 
-/**********Post Partials********/
+/**********Posts********/
 
-.random_post {
-	height: 100px;
-	width: 500px;
-	background-color: rgb(241, 110, 173);
-	color: rgb(33, 33, 33);
-	border-radius: 40px;
+.card-link {
+	float: left;
+	margin: 5px;
 }
 
+i p {
+	float: right;
+	margin-left: 10px;
+}
+
+.edit_button {
+	position: absolute;
+	bottom: 10px;
+	right: 100px;
+}
 
 /**********Welcome Page**********/
 

@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1><%= @user.username %></h1>
+		</div>
+	</div>	
+	<div class="row">
+		<div class="col post_container">
+			<form action="/your_post" method="POST">
+				<input class="post" type="text" readonly="true" name="post[:content]" value="<%= @user.posts.last.content %>">
+				<i class="fa fa-pencil edit_post" aria-hidden="true"> </i>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<a href="/delete_post/<%= @user.posts.last.id %>" class="btn btn-elegant round">Delete Post</a>
+		</div>
+		<div class="col">
+			<a href="/profile" class="btn btn-outline-elegant round">Profile</a>
+		</div>
+	</div>
+</div>

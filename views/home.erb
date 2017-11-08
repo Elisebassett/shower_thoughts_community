@@ -9,14 +9,19 @@
 			<div class="col">
 				<a href="/profile"><button type="button" class="btn btn-info round">Your Profile</button></a>
 			</div>
+			<div class="col">
+				<a href="/post"><button class="btn btn-outline-info waves-effect round">New Shower Thought</button></a>
+			</div>
 		</div>
 		<div class="row">
 				<% @feed.each do |post| %>
-						<div class="random_post col-6"> 
-							<h4><%= post.user.username %></h4> 
-							<br> 
-							<p><%= post.content %></p> 
-						</div>
+					<div class="col-6">
+						<div class="card card-body post_container">
+							<h4 class="card-title"><%= post.user.username %></h4>
+					    <textarea class="card-text post" readonly="true"><%= post.content %></textarea>
+					    <a class="delete_post card-link" href="/delete_post/<%= post.id %>">Delete</a>
+				    </div>
+			   </div> 
 				<% end %>
 		</div>
 	</div><!-- container -->
