@@ -9,19 +9,19 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%= url('css/bootstrap.min.css') %>" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="<%= url('css/mdb.min.css') %>" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link href="<%= url('css/style.css') %>" rel="stylesheet">
+    <link rel="stylesheet" href="<%= url('css/main.css') %>">
 </head>
 
 <body>
     <% if @user %>
      <nav class='navbar'>
           <div class="nav_back"></div>
-          <a href="/"><img id="logo_nav" src="imgs/nav_logo.png"></a>
+          <a href="/"><img id="logo_nav" src="<%= url('imgs/nav_logo.png') %>"></a>
           <ul class="nav">
             <li class="nav-item">
               <a class="nav-link active" href="/">Home</a>
@@ -80,14 +80,14 @@
   </div>
  <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="<%= url('js/jquery-3.2.1.min.js') %>"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="<%= url('js/popper.min.js') %>"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%= url('js/bootstrap.min.js') %>"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-  <script src="js/main.js"></script>
+    <script type="text/javascript" src="<%= url('js/mdb.min.js') %>"></script>
+    <script src="<%= url('js/main.js') %>"></script>
 </body>
 
 </html>
