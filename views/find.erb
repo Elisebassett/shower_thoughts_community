@@ -18,7 +18,7 @@
 						<% @results.each do |user| %>
 							<div class="col result">
 								<h1><%= user.name %></h1>
-								<button class="btn btn-info">Visit Profile</button>
+								<a href="/profile/<%= user.id %>" class="btn btn-info">Visit Profile</a>
 							</div>	
 						<% end %>
 					<% end %>

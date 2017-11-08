@@ -27,8 +27,13 @@
               <a class="nav-link active" href="/">Home</a>
             </li>
             <form action="/find" class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
-            </form>
+               <!-- <div class="search_wrapper">
+                  <div> -->
+                    <input id="nav_search" class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
+                  <!-- </div>
+                  <div id="results"></div>
+               </div>
+ -->            </form>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -36,6 +41,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="/profile">See Info</a>
+                    <a class="dropdown-item" href="/post">Create a New Post</a>
                     <a class="dropdown-item" href="/change_details">Change Details</a>
                     <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
@@ -43,7 +49,7 @@
           </ul>
         </nav>
     <% else %>
-        < <nav class='navbar'>
+        <nav class='navbar'>
           <div class="nav_back"></div>
           <a href="/"><img id="logo_nav" src="imgs/nav_logo.png"></a>
           <ul class="nav">
@@ -51,7 +57,12 @@
               <a class="nav-link active" href="/">Home</a>
             </li>
             <form action="/find" class="form-inline">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
+               <!-- <div class="search_wrapper">
+                  <div> -->
+                    <input id="nav_search" class="form-control mr-sm-2" type="text" placeholder="Search for User" name="name" aria-label="Search">
+                  <!-- </div>
+                  <div id="results"></div>
+                </div> -->
             </form>
              <li class="nav-item">
               <a class="nav-link active" href="/sign_in">Sign In</a>
