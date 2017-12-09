@@ -6,8 +6,8 @@
 	</div>	
 	<div class="row">
 		<div class="card card-body post_container">
-			<form action="/your_post" method="POST">
-		    <textarea class="card-title post no_title" readonly="true" maxlength='150'><%= @user.posts.last.content %></textarea>
+			<form action="/your_post" method="POST" class="edit_form">
+		    <textarea class="card-title post no_title" name="post[content]" readonly="true" maxlength='150'><%= @user.posts.last.content %></textarea>
 				<a class="delete_post card-link" href="/delete_post/<%= @user.posts.last.id %>">Delete</a>
 				<i class="fa fa-pencil edit_post card-link" aria-hidden="true"></i>
 				<input class="btn btn-elegant round edit_button" type="submit" value="done">
