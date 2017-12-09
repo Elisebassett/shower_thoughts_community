@@ -58,7 +58,8 @@ get '/profile' do
 end
 
 post '/profile' do
-	@current_user = current_user
+	@post = params[:post_id]
+	p @post
 	@post.update(params[:post])
 	redirect '/'
 end
