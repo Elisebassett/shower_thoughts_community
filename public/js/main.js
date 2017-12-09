@@ -10,13 +10,15 @@ $(function(){
 	// 	}
 
 	// });
+$('.edit_button').hide();
 $('.edit_post').on('click', function(){
 	// $('.post').attr('readonly', false).focus();
-	$(this).parent('form').find('textarea').attr('readonly', false).focus();
+	parent = $(this).parent('form');
+	parent.find('textarea').attr('readonly', false).focus();
 	$(this).html(`
 		<p><em>You may now make changes</em></p>
-		<input class="btn btn-elegant round edit_button" type="submit" value="done">
 		`);
+	parent.find('.edit_button').show();
 });
 
 

@@ -29,7 +29,7 @@
 				    <textarea class="card-text post" readonly="true" maxlength='150'><%= posts.content %></textarea>
 						<% if @user == @current_user %>
 								<a class="delete_post card-link" href="/delete_post/<%= posts.id %>">Delete</a>
-								<i class="fa fa-pencil edit_post card-link" aria-hidden="true"> </i>
+								<i class="fa fa-pencil edit_post card-link" aria-hidden="true"></i>
 						<% end %>
 					</form>
 				</div>
