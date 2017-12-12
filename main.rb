@@ -57,8 +57,9 @@ get '/profile' do
 	end
 end
 
-post '/profile' do
-	@current_user = current_user
+post '/edit_post/:id' do
+	@post = Post.find(params[:id])
+	p @post
 	@post.update(params[:post])
 	redirect '/'
 end
