@@ -25,8 +25,7 @@
 		<% @posts.each do |post| %>
 			<div class="col-6">
 				<div class="card card-body post_container">
-					<form action="/profile" method="POST">
-						<input type="number" hidden="true" name="post_id[id]" value="<%= post.id %>">
+					<form action="/edit_post/<%= post.id %>" method="POST">
 				    <textarea class="card-text post" readonly="true" name="post[content]" maxlength='150'><%= post.content %></textarea>
 						<% if @user == @current_user %>
 								<a class="delete_post card-link" href="/delete_post/<%= post.id %>">Delete</a>
